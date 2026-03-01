@@ -6,7 +6,7 @@
   scroll-behavior: smooth;
 }
 
-/* Animated Gradient Background */
+/* Animated Background */
 body {
   background: linear-gradient(-45deg, #ff758c, #ff7eb3, #65d6ce, #6a11cb);
   background-size: 400% 400%;
@@ -41,7 +41,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-links a {
@@ -52,6 +52,12 @@ nav {
 
 .nav-links a:hover {
   color: #ffe600;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* HERO */
@@ -87,7 +93,6 @@ header {
   font-weight: 300;
 }
 
-/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -180,14 +185,35 @@ footer {
   font-size: 14px;
 }
 
-/* MOBILE RESPONSIVE */
-@media(max-width: 768px) {
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
-    display: none;
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+  }
+
+  .nav-links.active {
+    right: 8%;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .section {
