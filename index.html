@@ -5,8 +5,6 @@
   <title>Prinyanka Patil | Lifestyle Creator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -15,7 +13,12 @@
 <!-- NAVBAR -->
 <nav>
   <div class="logo">Prinyanka ✨</div>
-  <ul class="nav-links">
+
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#journey">Journey</a></li>
@@ -41,10 +44,9 @@
 <section id="about" class="section reveal">
   <h2>About Me</h2>
   <p>
-    I am a Pune-based lifestyle creator blending creativity with confidence.
-    My content reflects authenticity, culture, elegance and positive living.
-    Through everyday moments, I tell stories that inspire balance between
-    ambition and aesthetic living.
+    I am a Pune-based lifestyle creator blending ambition with elegance.
+    My content reflects culture, confidence, positivity, and modern living.
+    Through authentic storytelling, I celebrate everyday beauty and meaningful moments.
   </p>
 </section>
 
@@ -73,7 +75,7 @@
     </div>
     <div class="card">
       <h3>✨ Growth</h3>
-      <p>Building a community through authenticity.</p>
+      <p>Building a positive and authentic community.</p>
     </div>
   </div>
 </section>
@@ -81,7 +83,7 @@
 <!-- CONTACT -->
 <section id="contact" class="section light reveal">
   <h2>Let's Connect</h2>
-  <p>Follow my journey for daily lifestyle inspiration.</p>
+  <p>Follow my journey for daily lifestyle inspiration and positivity.</p>
   <a href="https://instagram.com/priya_n_0707" target="_blank" class="btn">
     Visit Instagram
   </a>
@@ -93,7 +95,10 @@
 </footer>
 
 <script>
-// Scroll Reveal Animation
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
 window.addEventListener("scroll", function() {
   let reveals = document.querySelectorAll(".reveal");
   for (let i = 0; i < reveals.length; i++) {
