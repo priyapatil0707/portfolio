@@ -5,79 +5,52 @@
   <title>Prinyanka Patil | Lifestyle Creator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 <nav>
-  <div class="logo">Prinyanka Patil</div>
-  <ul>
+  <div class="logo">Prinyanka ✨</div>
+  <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#journey">Journey</a></li>
     <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#values">Values</a></li>
-    <li><a href="#collab">Collaborate</a></li>
+    <li><a href="#journey">Journey</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <header>
-  <div class="hero-content">
+  <div class="hero">
     <img src="images/profile.png" alt="Prinyanka Patil">
     <h1>Prinyanka Patil</h1>
-    <h3>Lifestyle Creator | Pune | Engineer 💻</h3>
-    <p>Saree • Sunsets • Strong Coffee ☕🌅</p>
+    <p>Lifestyle Creator | Pune | Engineer 💻</p>
+    <p class="tagline">Saree • Sunsets • Strong Coffee ☕🌅</p>
+
     <a href="https://instagram.com/priya_n_0707" target="_blank" class="btn">
-      Follow My Journey
+      Follow My Instagram
     </a>
   </div>
 </header>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section reveal">
   <h2>About Me</h2>
   <p>
-    I’m Prinyanka, a Pune-based lifestyle creator blending modern ambition 
-    with cultural elegance. As an engineer by profession and a creative 
-    at heart, I capture everyday beauty through authentic storytelling.
+    I am a Pune-based lifestyle creator blending creativity with confidence.
+    My content reflects authenticity, culture, elegance and positive living.
+    Through everyday moments, I tell stories that inspire balance between
+    ambition and aesthetic living.
   </p>
-  <p>
-    My content reflects tradition, confidence, simplicity, and mindful living.
-    From saree styling to sunset reflections, I celebrate small moments that
-    create meaningful memories.
-  </p>
-</section>
-
-<!-- JOURNEY -->
-<section id="journey" class="section light">
-  <h2>My Journey</h2>
-  <p>
-    What started as sharing personal moments evolved into a lifestyle platform.
-    Through consistent storytelling and genuine expression, I’ve built a
-    growing community that connects with authenticity.
-  </p>
-  <div class="timeline">
-    <div class="timeline-item">
-      <h3>🌸 Discovering Creativity</h3>
-      <p>Exploring fashion, culture and self-expression.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>📸 Building Presence</h3>
-      <p>Sharing consistent lifestyle content and aesthetic moments.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>✨ Growing Community</h3>
-      <p>Connecting with like-minded people who value authenticity.</p>
-    </div>
-  </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="section">
-  <h2>Featured Moments</h2>
+<section id="gallery" class="section light reveal">
+  <h2>Colorful Moments</h2>
   <div class="grid">
     <img src="images/post1.png" alt="">
     <img src="images/post2.png" alt="">
@@ -86,48 +59,29 @@
   </div>
 </section>
 
-<!-- VALUES -->
-<section id="values" class="section light">
-  <h2>What I Stand For</h2>
+<!-- JOURNEY -->
+<section id="journey" class="section reveal">
+  <h2>My Journey</h2>
   <div class="cards">
     <div class="card">
-      <h3>Authenticity</h3>
-      <p>Real stories, real emotions, real lifestyle.</p>
+      <h3>🌸 Creativity</h3>
+      <p>Exploring lifestyle, fashion and culture.</p>
     </div>
     <div class="card">
-      <h3>Elegance</h3>
-      <p>Celebrating culture and tradition with confidence.</p>
+      <h3>📸 Expression</h3>
+      <p>Capturing golden sunsets and meaningful moments.</p>
     </div>
     <div class="card">
-      <h3>Positivity</h3>
-      <p>Strong coffee. Strong mindset. Strong woman energy.</p>
+      <h3>✨ Growth</h3>
+      <p>Building a community through authenticity.</p>
     </div>
   </div>
 </section>
 
-<!-- COLLABORATION -->
-<section id="collab" class="section">
-  <h2>Work With Me</h2>
-  <p>
-    I am open to lifestyle, fashion, culture, travel, and
-    wellness collaborations that align with my values.
-  </p>
-  <p>
-    My focus is on authentic storytelling and meaningful
-    brand partnerships that connect with audiences.
-  </p>
-  <a href="https://instagram.com/priya_n_0707" target="_blank" class="btn">
-    Let's Collaborate
-  </a>
-</section>
-
 <!-- CONTACT -->
-<section id="contact" class="section light">
-  <h2>Stay Connected</h2>
-  <p>
-    Join my journey on Instagram for daily lifestyle inspiration,
-    cultural elegance, and positive living.
-  </p>
+<section id="contact" class="section light reveal">
+  <h2>Let's Connect</h2>
+  <p>Follow my journey for daily lifestyle inspiration.</p>
   <a href="https://instagram.com/priya_n_0707" target="_blank" class="btn">
     Visit Instagram
   </a>
@@ -135,9 +89,23 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Prinyanka Patil | Lifestyle Creator</p>
-  <p>Made with ❤️ in Pune</p>
+  <p>© 2026 Prinyanka Patil | Made with 💖</p>
 </footer>
+
+<script>
+// Scroll Reveal Animation
+window.addEventListener("scroll", function() {
+  let reveals = document.querySelectorAll(".reveal");
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 100;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+});
+</script>
 
 </body>
 </html>
